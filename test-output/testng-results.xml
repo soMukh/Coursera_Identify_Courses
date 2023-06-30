@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-20T14:06:11 IST" name="Coursera" finished-at="2023-06-20T14:09:05 IST" duration-ms="173801">
+    <groups>
+      <group name="Smoke Suite">
+        <method signature="Main.search()[pri:0, instance:test.Main@2dc9b0f5]" name="search" class="test.Main"/>
+        <method signature="Main.retrieveCourse()[pri:1, instance:test.Main@2dc9b0f5]" name="retrieveCourse" class="test.Main"/>
+      </group> <!-- Smoke Suite -->
+      <group name="Regression Suite">
+        <method signature="Main.retrieveLanguageLevel()[pri:2, instance:test.Main@2dc9b0f5]" name="retrieveLanguageLevel" class="test.Main"/>
+        <method signature="Main.retrieveErrorMessage()[pri:3, instance:test.Main@2dc9b0f5]" name="retrieveErrorMessage" class="test.Main"/>
+      </group> <!-- Regression Suite -->
+    </groups>
+    <test started-at="2023-06-20T14:06:11 IST" name="Coursera Flow Check" finished-at="2023-06-20T14:09:05 IST" duration-ms="173801">
+      <class name="test.Main">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:06:11 IST" name="setUp" finished-at="2023-06-20T14:06:43 IST" duration-ms="31625" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startTest()[pri:0, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:06:43 IST" name="startTest" finished-at="2023-06-20T14:06:45 IST" duration-ms="2185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="search()[pri:0, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:06:45 IST" name="search" finished-at="2023-06-20T14:06:54 IST" duration-ms="8709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method signature="retrieveCourse()[pri:1, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:06:54 IST" name="retrieveCourse" finished-at="2023-06-20T14:07:37 IST" depends-on-methods="test.Main.search" duration-ms="42742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrieveCourse -->
+        <test-method signature="retrieveLanguageLevel()[pri:2, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:07:37 IST" name="retrieveLanguageLevel" finished-at="2023-06-20T14:08:02 IST" duration-ms="25027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrieveLanguageLevel -->
+        <test-method signature="retrieveErrorMessage()[pri:3, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:08:02 IST" name="retrieveErrorMessage" finished-at="2023-06-20T14:09:04 IST" duration-ms="61868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrieveErrorMessage -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:09:04 IST" name="endTest" finished-at="2023-06-20T14:09:04 IST" duration-ms="874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.Main@2dc9b0f5]" started-at="2023-06-20T14:09:04 IST" name="close" finished-at="2023-06-20T14:09:05 IST" duration-ms="620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- test.Main -->
+    </test> <!-- Coursera Flow Check -->
+  </suite> <!-- Coursera -->
+</testng-results>
