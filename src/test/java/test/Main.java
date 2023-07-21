@@ -48,11 +48,15 @@ public class Main
 		data=ExcelUtils.readExcel("./src/main/resources/FormInput.xlsx","form_invalid",1,10);
 	}
 	@Test(groups="Smoke Suite",priority=0,retryAnalyzer=Retry.class)
-	public void search()
+	public void searchAndRetrieveCourses()
 	{
 		test1=report.createTest("Retrieving Web Development Courses For Beginners In English");
-		//Sends search value and logs the status
+		//Sends search value, sets the conditions, retrieves the first two courses and logs the status
 		int flagSearch=coursera.setSearch();
+		int flagCondition[]=coursera.setConditions();
+		int flagCourse[]=coursera.getCourses();
+		int conditionExpected[]= {1,1,1};
+		int courseExpected[]= {1,1,1,1};	
 		if(flagSearch==1)
 		{
 			test1.log(Status.PASS,"Search bar is visible");
@@ -64,17 +68,6 @@ public class Main
 			test1.log(Status.FAIL,"Value can't be entered in search bar.");
 			test1.log(Status.SKIP,"Setting conditions and retrieving courses are skipped.");
 		}
-		//Comparing the actual and expected result
-		Assert.assertEquals(flagSearch,1);
-	}
-	@Test(groups="Smoke Suite",dependsOnMethods="search",priority=1)
-	public void retrieveCourse()
-	{
-		//Sets the conditions, retrieves the first two courses and logs the status
-		int flagCondition[]=coursera.setConditions();
-		int flagCourse[]=coursera.getCourses();
-		int conditionExpected[]= {1,1,1};
-		int courseExpected[]= {1,1,1,1};
 		if(flagCondition[0]==1)
 		{
 			test1.log(Status.PASS,"Beginner is visible to select.");
@@ -136,12 +129,13 @@ public class Main
 		else
 		{
 			test1.log(Status.FAIL,"Didn't navigate back to searched page.");
-		}	
-		//Comparing the actual and expected results
+		}
+		//Comparing the actual and expected result
+		Assert.assertEquals(flagSearch,1);
 		Assert.assertEquals(flagCondition,conditionExpected);
 		Assert.assertEquals(flagCourse,courseExpected);
 	}
-	@Test(groups="Regression Suite",priority=2,retryAnalyzer=Retry.class)
+	@Test(groups="Regression Suite",priority=1,retryAnalyzer=Retry.class)
 	public void retrieveLanguageLevel()
 	{
 		test2=report.createTest("Retrieving All Languages and Levels In Language Learning");
@@ -168,7 +162,7 @@ public class Main
 		//Comparing the actual and expected result
 		Assert.assertEquals(flagLanguageLevel,languageLevelExpected);
 	}
-	@Test(groups="Regression Suite",priority=3,retryAnalyzer=Retry.class)
+	@Test(groups="Regression Suite",priority=2,retryAnalyzer=Retry.class)
 	public void retrieveErrorMessage()
 	{
 		test3=report.createTest("Retrieving Error Message After Entering An Invalid Data In A Mandatory Field And Submitting The Form");

@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,11 +101,6 @@
                       <a href="#" panel-name="suite-Coursera" class="show-methods passed suite-Coursera"> (show)</a> <!-- show-methods passed suite-Coursera -->
                     </span>
                     <div class="method-list-content passed suite-Coursera">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Coursera" title="test.Main" class="method navigator-link" hash-for-method="retrieveCourse">retrieveCourse</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Coursera" title="test.Main" class="method navigator-link" hash-for-method="retrieveErrorMessage">retrieveErrorMessage</a> <!-- method navigator-link -->
@@ -118,7 +113,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Coursera" title="test.Main" class="method navigator-link" hash-for-method="search">search</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Coursera" title="test.Main" class="method navigator-link" hash-for-method="searchAndRetrieveCourses">searchAndRetrieveCourses</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Coursera -->
@@ -141,13 +136,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="retrieveCourse">
-                  </a> <!-- retrieveCourse -->
-                  <span class="method-name">retrieveCourse</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="retrieveErrorMessage">
                   </a> <!-- retrieveErrorMessage -->
                   <span class="method-name">retrieveErrorMessage</span>
@@ -162,9 +150,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="search">
-                  </a> <!-- search -->
-                  <span class="method-name">search</span>
+                  <a name="searchAndRetrieveCourses">
+                  </a> <!-- searchAndRetrieveCourses -->
+                  <span class="method-name">searchAndRetrieveCourses</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,11 +209,7 @@
               <span class="test-group-name">Smoke Suite</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">retrieveCourse</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">search</span>
+                <span class="method-in-group-name">searchAndRetrieveCourses</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -245,23 +229,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'retrieveErrorMessage')
+data.setCell(0, 1, 'searchAndRetrieveCourses')
 data.setCell(0, 2, 'test.Main')
-data.setCell(0, 3, 61868);
+data.setCell(0, 3, 113172);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'retrieveCourse')
+data.setCell(1, 1, 'retrieveErrorMessage')
 data.setCell(1, 2, 'test.Main')
-data.setCell(1, 3, 42742);
+data.setCell(1, 3, 40379);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'retrieveLanguageLevel')
 data.setCell(2, 2, 'test.Main')
-data.setCell(2, 3, 25027);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'search')
-data.setCell(3, 2, 'test.Main')
-data.setCell(3, 3, 8709);
+data.setCell(2, 3, 15062);
 window.suiteTableData['Coursera']= { tableData: data, tableDiv: 'times-div-Coursera'}
 return data;
 }
@@ -299,31 +279,27 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">startTest</span>
-                <span class="method-start">31668 ms</span>
+                <span class="method-start">24647 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">search</span>
-                <span class="method-start">33885 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">retrieveCourse</span>
-                <span class="method-start">42634 ms</span>
+                <span class="method-name">searchAndRetrieveCourses</span>
+                <span class="method-start">26720 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">retrieveLanguageLevel</span>
-                <span class="method-start">85383 ms</span>
+                <span class="method-start">139938 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">retrieveErrorMessage</span>
-                <span class="method-start">110413 ms</span>
+                <span class="method-start">155004 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">172285 ms</span>
+                <span class="method-start">195387 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">close</span>
-                <span class="method-start">173159 ms</span>
+                <span class="method-start">196134 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

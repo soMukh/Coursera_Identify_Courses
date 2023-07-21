@@ -77,6 +77,8 @@ public class Coursera
 		try
 		{
 			action=new Actions(driver);
+			String courseRating="";
+			String courseDuration="";
 			//Takes screenshot of courses
 			action.moveToElement(driver.findElement(locator.beginnerFilterClear)).build().perform();
 			TakeScreenshot.takeScreenshot(driver,"Courses.png");
@@ -85,8 +87,38 @@ public class Coursera
 			driver.navigate().to(hrefCourse1);
 			TakeScreenshot.takeScreenshot(driver,"Course1.png");
 			String courseName=driver.findElement(locator.cName).getText();
-			String courseRating=driver.findElement(locator.rating).getText();
-			String courseDuration=driver.findElement(locator.duration).getText();
+			try
+			{
+				courseRating=driver.findElement(locator.rating).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+			try
+			{
+				courseRating=driver.findElement(locator.rating2).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+			try
+			{
+				courseDuration=driver.findElement(locator.duration).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+			try
+			{
+				courseDuration=driver.findElement(locator.duration2).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
 			//Writing the details of course1 into excel sheet
 			ExcelUtils.writeExcel("./src/test/resources/Courses.xlsx","course_details",1,0,courseName);
 			ExcelUtils.writeExcel("./src/test/resources/Courses.xlsx","course_details",1,1,courseRating);
@@ -99,8 +131,38 @@ public class Coursera
 			driver.navigate().to(hrefCourse2);
 			TakeScreenshot.takeScreenshot(driver,"Course2.png");
 			courseName=driver.findElement(locator.cName).getText();
-			courseRating=driver.findElement(locator.rating).getText();
-			courseDuration=driver.findElement(locator.duration).getText();
+			try
+			{
+				courseRating=driver.findElement(locator.rating).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+			try
+			{
+				courseRating=driver.findElement(locator.rating2).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+			try
+			{
+				courseDuration=driver.findElement(locator.duration).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+			try
+			{
+				courseDuration=driver.findElement(locator.duration2).getText();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
 			//Writing the details of course2 into excel sheet
 			ExcelUtils.writeExcel("./src/test/resources/Courses.xlsx","course_details",2,0,courseName);
 			ExcelUtils.writeExcel("./src/test/resources/Courses.xlsx","course_details",2,1,courseRating);

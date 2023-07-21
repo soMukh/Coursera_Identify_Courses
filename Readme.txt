@@ -1,4 +1,7 @@
 Project Name : Identify Courses
+ 
+Associate Name : Soham Mukherjee
+Associate ID : 2271264
 
 URL used: https://www.coursera.org
 Operating System used: Windows 11

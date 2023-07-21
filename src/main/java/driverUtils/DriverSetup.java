@@ -28,11 +28,10 @@ public class DriverSetup
 				//Driver for Edge browser
 				driver=new EdgeDriver();
 			}
-			String url=ReadProperties.readProperties("url");
 			//Maximizing the window
 			driver.manage().window().maximize();
 			//Opening the application
-			driver.get(url);
+			driver.get(ReadProperties.readProperties("url"));
 			//Applying implicit wait for synchronization
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		}

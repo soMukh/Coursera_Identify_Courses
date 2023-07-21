@@ -1,0 +1,21 @@
+
+The number of languages present are : 8
+
+The languages are : 
+
+Chinese (China)
+Chinese (Traditional)
+English
+French
+Japanese
+Portuguese (Brazil)
+Spanish
+Swedish
+The number of levels present are : 4
+
+The levels are : 
+
+Beginner
+Intermediate
+Advanced
+Mixed

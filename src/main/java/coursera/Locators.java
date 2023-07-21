@@ -14,7 +14,9 @@ public class Locators
 	By course2=By.xpath("//a[contains(@aria-label,'Introduction to Front-End Development')]");
 	By cName=By.tagName("h1");
 	By rating=By.xpath("//span[@data-test='number-star-rating']");
+	By rating2=By.xpath("(//p[contains(text(),'reviews')])[2]/preceding-sibling::div[contains(text(),'.')]");
 	By duration=By.xpath("//div[@class='ProductGlance']//span[contains(text(),'Approx.')]");
+	By duration2=By.xpath("(//div[contains(text(),'approximately')])[2]");
 	By explore=By.xpath("//span[text()='Explore']");
 	By languageLearning=By.xpath("//span[text()='Language Learning']//parent::button");
 	By freeCourses=By.xpath("//a[contains(@href,'Language') and text()='Free courses']");
